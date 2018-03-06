@@ -28,18 +28,7 @@ function ifHaveImages () {
 
 function startServer () {
   const server = http.createServer((req, res) => {
-    const { url } = req
-    switch (url) {
-      case '/':
-        const filePath = getRandomFilePath()
-        fs.createReadStream(filePath).pipe(res)
-        break
-
-      default:
-        res.statusCode = 404
-        res.end('NOT FOUND')
-        break
-    }
+    fs.createReadStream(getRandomFilePath()).pipe(res)
   })
 
   server.on('error', error => {
