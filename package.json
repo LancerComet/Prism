@@ -1,0 +1,14 @@
+{
+  "name": "prism",
+  "version": "1.0.0",
+  "description": "A app that returns an image in random.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": {
+    "name": "LancerComet",
+    "email": "chw644@hotmail.com"
+  },
+  "license": "MIT"
+}
