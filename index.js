@@ -28,6 +28,7 @@ function ifHaveImages () {
 
 function startServer () {
   const server = http.createServer((req, res) => {
+    res.setHeader('Content-Type', 'image/jpeg')
     fs.createReadStream(getRandomFilePath()).pipe(res)
   })
 
